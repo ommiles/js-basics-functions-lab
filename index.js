@@ -1,18 +1,18 @@
 let hq = 42
 
-function distanceFromHqInBlocks(blockDestination) {
+let distanceFromHqInBlocks = blockDestination => {
     return Math.abs(hq-blockDestination)
 }
 
-function distanceFromHqInFeet(feetDestination) {
+let distanceFromHqInFeet = feetDestination => {
     return Math.abs(distanceFromHqInBlocks(feetDestination) * 264)
 }
 
-function distanceTravelledInFeet(departureBlock, arrivalBlock) {
+let distanceTravelledInFeet = (departureBlock, arrivalBlock) => {
     return(Math.abs(departureBlock-arrivalBlock)) * 264
 }
 
-function calculatesFarePrice(departure, arrival) {
+let calculatesFarePrice = (departure, arrival) => {
     let fare = 0
     if (distanceTravelledInFeet(departure, arrival) < 400) {
         fare = 0
